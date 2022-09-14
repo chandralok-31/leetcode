@@ -49,10 +49,32 @@ class Solution:
 
         
         
+############24        
         
         
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def swapPairs(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        slow=head
         
-        
+        if not head or not head.next:
+            return head
+        fast=head.next
+        while fast!=None :
+            first=slow
+            second=fast
+            first.val,second.val=second.val,first.val
+            slow=slow.next.next
+            fast=fast.next
+            if fast!=None:
+                fast=fast.next
+            else:
+                return head
+        return head      
         
         
         
