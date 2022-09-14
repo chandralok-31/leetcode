@@ -104,3 +104,20 @@ class Solution:
         
   
         
+
+#############  125
+class Solution:
+    def isPalindrome(self, s: str) -> bool:
+        t = ""
+        la="abcdefghijklmnopqrstuvwxyz"
+        ua="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        n="0123456789"
+        for i in s:
+            if(i in la or i in ua or i in n):
+                t+=i
+        
+        t=t.lower()
+        print(t)
+        if t==t[::-1]:
+            return True
+        return False
