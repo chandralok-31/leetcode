@@ -166,3 +166,24 @@ class Solution:
             even=even.next
         odd.next=Even
         return head
+
+
+############# 445
+class Solution:
+    def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
+        word1=""
+        word2=""
+        while l1:
+            word1+=str(l1.val)
+            l1=l1.next
+        while l2:
+            word2+=str(l2.val)
+            l2=l2.next 
+        num=str(int(word1)+int(word2))
+        n=len(num)
+        head=ListNode(int(num[0]))
+        ptr=head
+        for i in range(1,n):
+            head.next=ListNode(int(num[i]))
+            head=head.next
+        return ptr
