@@ -148,3 +148,21 @@ class Solution:
             l=l+1
             r=r-1
         return True
+
+
+
+############### 328
+class Solution:
+    def oddEvenList(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        if head==None or head.next==None :
+            return head
+        odd,even=head,head.next
+        Even=even
+        while odd.next and even.next:
+            odd.next=odd.next.next
+            even.next=even.next.next
+            
+            odd=odd.next
+            even=even.next
+        odd.next=Even
+        return head
