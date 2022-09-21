@@ -197,3 +197,21 @@ class Solution:
         for i in jewels:
             count=count+stones.count(i)
         return count
+
+
+
+#################### 1678
+class Solution:
+    def interpret(self, command: str) -> str:
+        str=""
+        for i in range(len(command)):
+            print(i)
+            if command[i]=="(" and command[i+1]==")":
+                str+="o"
+            elif command[i]==")":
+                pass
+            elif command[i]=="(" and command[i+1]!=")":
+                pass
+            else:
+                str+=command[i]
+        return str        
