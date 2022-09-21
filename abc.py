@@ -187,3 +187,13 @@ class Solution:
             head.next=ListNode(int(num[i]))
             head=head.next
         return ptr
+
+
+
+############### 771
+class Solution:
+    def numJewelsInStones(self, jewels: str, stones: str) -> int:
+        count=0
+        for i in jewels:
+            count=count+stones.count(i)
+        return count
