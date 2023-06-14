@@ -5,7 +5,7 @@ class Solution:
         summ=0
         if n==1:
             return True
-        if n==4:
+        if n==4 or n==9:
             return False
         
         while n>0:
