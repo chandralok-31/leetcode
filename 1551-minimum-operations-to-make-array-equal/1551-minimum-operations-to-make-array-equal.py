@@ -6,14 +6,7 @@ class Solution:
         for i in range(n//2):
             cnt+=target-arr[i]
         return cnt
-            
-        
-        
-        
-        
-        
-        
-        
+                    
 #         arr=[(2*i+1) for i in range(n)]
 #         target=sum(arr)//n
 #         i=0
