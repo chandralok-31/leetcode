@@ -14,4 +14,17 @@ class Solution:
             answ=sum(k>1 for k in d.values())
                 
         return answ
+    
+        # count=0
+        # d={}
+        # for i in nums:
+        #     if i in d:
+        #         d[i]+=1
+        #     else:
+        #         d[i]=1
+        # if k>0:
+        #     count=sum([i+k in d for i in d.keys()])
+        # else:
+        #     count=sum([k>1 for i in d.values()])
+        # return count
             
